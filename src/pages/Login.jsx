@@ -157,7 +157,7 @@ const Login = () => {
                 className="btn"
                 colorScheme="yellow"
               >
-                Don't have an Account
+                Create new Account
               </Button>
             </ButtonGroup>
           </FormControl>
