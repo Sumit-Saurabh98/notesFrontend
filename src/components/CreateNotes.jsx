@@ -92,7 +92,7 @@ function CreateNotes(props) {
                   id="title"
                   mb={"10px"}
                   type="text"
-                  placeholder="Email"
+                  placeholder="Enter Title"
                   focusBorderColor="yellow.600"
                   required
                   value={title}
