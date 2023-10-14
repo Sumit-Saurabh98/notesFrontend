@@ -17,9 +17,11 @@ import {
   Textarea,
 } from "@chakra-ui/react";
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { AuthContext } from "../context/AuthContextProvider";
 
 function CreateNotes(props) {
+    const {auth} = useContext(AuthContext);
   const toast = useToast();
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
@@ -64,7 +66,9 @@ function CreateNotes(props) {
   };
   return (
     <Box>
-      <Text
+     {
+        auth ? (
+             <Text
         color="#888888"
         fontSize="xl"
         _hover={{ color: "gold", cursor: "pointer" }}
@@ -72,6 +76,8 @@ function CreateNotes(props) {
       >
         Create Notes
       </Text>
+        ):""
+     }
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
